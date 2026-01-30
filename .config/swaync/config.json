@@ -1,0 +1,61 @@
+{
+  "$schema": "/etc/xdg/swaync/configSchema.json",
+  "positionX": "right",
+  "positionY": "top",
+  "layer": "overlay",
+  "layer-shell": true,
+  "cssPriority": "user",
+
+  "control-center-width": 400,
+  "fit-to-screen": false,
+  "control-center-height": 960,
+  "control-center-margin-top": 35,
+  "control-center-margin-bottom": 1,
+  "control-center-margin-right": 8,
+  "control-center-margin-left": 8,
+
+  "notification-window-width": 400,
+  "notification-icon-size": 89,
+  "notification-body-image-height": 260,
+  "notification-body-image-width": 200,
+
+  "widgets": ["buttons-grid", "mpris", "title", "dnd", "notifications"],
+  "widget-config": {
+    "title": {
+      "text": "Notifications",
+      "clear-all-button": true,
+      "button-text": "Clear All"
+    },
+    "dnd": {
+      "text": "Do Not Disturb"
+    },
+    "label": {
+      "max-lines": 1,
+      "text": " "
+    },
+    "mpris": {
+      "image-size": 60,
+      "image-radius": 12
+    },
+    "buttons-grid": {
+      "actions": [
+        {
+          "label": "󱚽",
+          "command": "nm-connection-editor"
+        },
+        {
+          "label": "󰂯",
+          "command": "blueman-manager"
+        },
+        {
+          "label": "",
+          "command": "amixer set Master toggle"
+        },
+        {
+          "label": "󰐦",
+          "command": "~/.config/hypr/Scripts/wlogout.sh"
+        }
+      ]
+    }
+  }
+}
