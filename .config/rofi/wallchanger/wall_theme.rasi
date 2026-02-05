@@ -1,0 +1,87 @@
+configuration {
+    show-icons: true;
+}
+
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+window {
+    width:            1800px;
+    height:           640px;   
+    anchor:           center;
+    location:         center;
+    background-color: transparent;
+    border:           0px;
+
+}
+
+mainbox {
+    background-color: rgba(30, 30, 46, 0.85);
+    orientation:      vertical;
+    children:         [ "textbox-header", "listview" ];
+    padding:          40px;
+    border-radius:    20px;
+}
+
+textbox-header {
+    /* Paksa header hanya ambil ruang sedikit di atas */
+    expand:           false;
+    content:          "󰸉  Select Wallpaper";
+    font:             "JetBrainsMono Nerd Font Bold 14";
+    vertical-align:   0.5;
+    horizontal-align: 0.5;
+    padding:          0px 0px 20px 0px;
+    text-color:       white;
+    background-color: transparent;
+
+}
+
+listview {
+    background-color: transparent;
+    layout:           horizontal;
+    spacing:          20px;
+    lines:            6;
+    border:           0px;
+}
+
+element {
+    orientation:      vertical;
+    background-color: transparent;
+    width:            260px;
+    spacing:          5px;      /* MATIKAN spacing biar nempel */
+    padding:          0px;      /* MATIKAN padding biar mepet border */
+    border-radius:    20px;
+    border:           0px;
+}
+
+element-icon {
+    size:             400px;    
+    horizontal-align: 0.5;
+    vertical-align:   0.5;
+    border:           0px;
+    background-color: none;
+    margin:           0px;
+    
+    /* Lengkung cuma di atas */
+    border-radius:    20px 20px 0px 0px; 
+}
+
+element-text {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding:          15px 5px;
+    horizontal-align: 0.5;
+    /* Lengkung cuma di bawah */
+    border-radius:    0px 0px 20px 20px;
+
+}
+
+element selected {
+    /* Kasih highlight tipis biar keliatan mana yang dipilih */
+    border:           0px;
+    background-color: none;
+    border:           0px;
+}
+
+element-text selected {
+    text-color:       #1e1e2e;
+    border:           0px;
+}
