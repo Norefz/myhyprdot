@@ -191,6 +191,7 @@ install_packages() {
         "blueman"
         "nm-connection-editor"
         "ttf-firacode-nerd"
+        "which"
     )
     
     # AUR packages (need yay/paru)
