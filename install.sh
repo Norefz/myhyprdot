@@ -375,11 +375,27 @@ setup_zsh() {
     if [[ "$current_shell" != */zsh ]]; then
         log_info "Changing default shell from $(basename "$current_shell") to zsh..."
         if command -v zsh &> /dev/null; then
-            chsh -s "$(which zsh)" || {
-                log_error "Failed to change shell. You may need to run 'chsh -s \$(which zsh)' manually."
+            # Get the full path to zsh without using 'which'
+            local zsh_path=""
+            if [[ -x "/bin/zsh" ]]; then
+                zsh_path="/bin/zsh"
+            elif [[ -x "/usr/bin/zsh" ]]; then
+                zsh_path="/usr/bin/zsh"
+            else
+                # Use command -v as fallback
+                zsh_path=$(command -v zsh)
+            fi
+            
+            if [[ -n "$zsh_path" ]]; then
+                chsh -s "$zsh_path" || {
+                    log_error "Failed to change shell. You may need to run 'chsh -s $zsh_path' manually."
+                    return 1
+                }
+                log_success "Default shell changed to zsh"
+            else
+                log_error "Could not determine zsh path. Cannot change shell."
                 return 1
-            }
-            log_success "Default shell changed to zsh"
+            fi
         else
             log_error "zsh not found in PATH. Cannot change shell."
             return 1
