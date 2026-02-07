@@ -162,7 +162,7 @@ install_packages() {
     "fcitx5" "cava" "ranger" "fastfetch" "starship" "eww" "qt6ct"
     "thunar" "rofi" "htop" "wireplumber" "wl-clipboard" "wlogout"
     "libnotify" "python3" "bc" "wget" "atool" "imagemagick" "zsh"
-    "blueman" "nm-connection-editor" "ttf-firacode-nerd" "which"
+    "blueman" "pokemon-colorscripts-git" "sl" "nm-connection-editor" "ttf-firacode-nerd" "which"
   )
 
   local aur_packages=(
