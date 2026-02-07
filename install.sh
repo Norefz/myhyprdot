@@ -229,11 +229,13 @@ create_symlinks() {
   if [[ -d "$REPO_DIR/assets/wallpaper" ]]; then
     log_info "Linking wallpapers from assets..."
     mkdir -p "$HOME/Pictures"
-    ln -sf "$REPO_DIR/assets/wallpaper" "$HOME/Pictures/wallpaper"
+    # if there already folder wallpaper
+    rm -rf "$HOME/Pictures/wallpaper"
+
+    ln -sfn "$REPO_DIR/assets/wallpaper" "$HOME/Pictures/wallpaper"
   fi
   # Special case for .zshrc if it exists in .config
   [[ -f "$REPO_DIR/.config/.zshrc" ]] && ln -sf "$REPO_DIR/.config/.zshrc" "$HOME/.zshrc"
-  [[ -f "$REPO_DIR/.config/.starship.toml" ]] && ln -sf "$REPO_DIR/.config/.zshrc" "$HOME/.zshrc"
   log_success "Symlinks created"
 }
 
@@ -258,7 +260,7 @@ setup_shell() {
 create_directories() {
   local dirs=(
     "$HOME/.local/bin" "$HOME/.cache/wal" "$HOME/.cache/rofi-walls"
-    "$HOME/Pictures/Screenshots" "$HOME/Pictures/wallpaper"
+    "$HOME/Pictures/Screenshots"
   )
   for dir in "${dirs[@]}"; do mkdir -p "$dir"; done
   log_success "Directories prepared"
