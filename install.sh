@@ -169,6 +169,7 @@ install_packages() {
     "rofi-lbonn-wayland-git"
     "fzf"
     "python-pywal16"
+    "bimbata-cursor-bin"
   )
 
   # Capture dependencies while ignoring log text
@@ -243,6 +244,28 @@ copy_configs() {
 
   log_success "All files copied physically. You can safely delete the repo folder after this."
 }
+setup_cursor() {
+  log_info "Configuring Bimbata-Ice cursor..."
+
+  # Pastikan folder icon lokal ada
+  mkdir -p "$HOME/.icons/default"
+
+  # Set Legacy/X11 compatibility
+  cat <<EOF >"$HOME/.icons/default/index.theme"
+[Icon Theme]
+Inherits=Bimbata-Ice
+EOF
+
+  # Set GTK Settings
+  mkdir -p "$CONFIG_DIR/gtk-3.0"
+  cat <<EOF >"$CONFIG_DIR/gtk-3.0/settings.ini"
+[Settings]
+gtk-cursor-theme-name=Bimbata-Ice
+gtk-cursor-theme-size=24
+EOF
+
+  log_success "System cursor set to Bimbata-Ice"
+}
 
 make_scripts_executable() {
   log_info "Optimizing script permissions..."
@@ -290,6 +313,7 @@ main() {
   install_packages
   create_backup
   copy_configs
+  setup_cursor
   make_scripts_executable
   setup_shell
   display_summary
