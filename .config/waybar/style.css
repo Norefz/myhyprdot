@@ -1,4 +1,4 @@
-@import "/home/erlan/.cache/wal/colors-waybar.css";
+@import "../../.cache/wal/colors-waybar.css";
 
 @define-color base #191724;
 @define-color surface #1f1d2e;
