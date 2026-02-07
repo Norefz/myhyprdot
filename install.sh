@@ -158,9 +158,9 @@ install_packages() {
   local base_packages=(
     "hyprland" "hypridle" "hyprlock" "waybar" "swaync" "kitty" "swww"
     "brightnessctl" "playerctl" "grim" "slurp" "jq" "ttf-jetbrains-mono-nerd"
-    "papirus-icon-theme" "network-manager-applet" "polkit-gnome" "dunst"
+    "papirus-icon-theme" "network-manager-applet" "polkit-gnome" "swaync"
     "fcitx5" "cava" "ranger" "fastfetch" "starship" "eww" "qt6ct"
-    "thunar" "wofi" "htop" "wireplumber" "wl-clipboard" "wlogout"
+    "thunar" "rofi" "htop" "wireplumber" "wl-clipboard" "wlogout"
     "libnotify" "python3" "bc" "wget" "atool" "imagemagick" "zsh"
     "blueman" "nm-connection-editor" "ttf-firacode-nerd" "which"
   )
@@ -171,7 +171,6 @@ install_packages() {
     "vesktop"
     "whatsdesk"
     "pywal-discord"
-    "miku-cursor-theme"
   )
 
   # Capture dependencies while ignoring log text
@@ -285,4 +284,3 @@ main() {
 }
 
 main "$@"
-
