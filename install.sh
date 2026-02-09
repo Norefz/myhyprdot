@@ -305,6 +305,29 @@ create_directories() {
   for dir in "${dirs[@]}"; do mkdir -p "$dir"; done
   log_success "Directories prepared"
 }
+generate_initial_wal() {
+  log_info "Initializing wallpaper and colors..."
+
+  local wall_dir="$HOME/Pictures/wallpaper"
+
+  if [ -d "$wall_dir" ] && [ "$(ls -A "$wall_dir")" ]; then
+    local random_wall=$(find "$wall_dir" -type f \( -name "*.jpg" -o -name "*.png" -o -name "*.jpeg" \) | shuf -n 1)
+
+    log_info "Selected wallpaper: $(basename "$random_wall")"
+
+    wal -i "$random_wall" -n
+
+    if pgrep -x "Hyprland" >/dev/null; then
+      swww-daemon &
+      sleep 1
+      swww img "$random_wall" --transition-type simple
+    fi
+
+    log_success "Theme initialized with random wallpaper."
+  else
+    log_error "No wallpapers found in $wall_dir. Skipping initialization."
+  fi
+}
 
 display_summary() {
   echo -e "\n${GREEN}========================================${NC}"
@@ -352,6 +375,7 @@ main() {
   create_backup
   copy_configs
   setup_cursor
+  generate_initial_wal
   make_scripts_executable
   setup_shell
   display_summary
