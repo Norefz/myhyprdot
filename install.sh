@@ -162,14 +162,14 @@ install_packages() {
     "fcitx5" "cava" "ranger" "fastfetch" "starship" "eww" "qt6ct"
     "thunar" "rofi" "htop" "wireplumber" "wl-clipboard" "wlogout"
     "libnotify" "python3" "bc" "wget" "atool" "imagemagick" "zsh"
-    "blueman" "nvim" "exa" "pokemon-colorscripts-git" "sl" "cmatrix" "nm-connection-editor" "ttf-firacode-nerd" "which"
+    "blueman" "qt6ct" "nvim" "exa" "pokemon-colorscripts-git" "sl" "cmatrix" "nm-connection-editor" "ttf-firacode-nerd" "which"
   )
 
   local aur_packages=(
     "rofi-lbonn-wayland-git"
     "fzf"
     "python-pywal16"
-    "bimbata-cursor-bin"
+    "bibata-cursor-theme"
   )
 
   # Capture dependencies while ignoring log text
@@ -244,27 +244,39 @@ copy_configs() {
 
   log_success "All files copied physically. You can safely delete the repo folder after this."
 }
-setup_cursor() {
-  log_info "Configuring Bimbata-Ice cursor..."
 
-  # Pastikan folder icon lokal ada
-  mkdir -p "$HOME/.icons/default"
+setup_cursor_all() {
+  local THEME="Bibata-Modern-Ice"
+  local SIZE=24
 
-  # Set Legacy/X11 compatibility
-  cat <<EOF >"$HOME/.icons/default/index.theme"
-[Icon Theme]
-Inherits=Bimbata-Ice
-EOF
+  log_info "Applying cursor $THEME to Hyprland, GTK, and QT..."
 
-  # Set GTK Settings
-  mkdir -p "$CONFIG_DIR/gtk-3.0"
-  cat <<EOF >"$CONFIG_DIR/gtk-3.0/settings.ini"
+  # 1. HYPRLAND
+  if command -v hyprctl &>/dev/null; then
+    hyprctl setcursor "$THEME" "$SIZE"
+  fi
+
+  # 2. GTK (GSettings & Config Files)
+  gsettings set org.gnome.desktop.interface cursor-theme "$THEME"
+  gsettings set org.gnome.desktop.interface cursor-size "$SIZE"
+
+  mkdir -p "$HOME/.config/gtk-3.0"
+  cat <<EOF >"$HOME/.config/gtk-3.0/settings.ini"
 [Settings]
-gtk-cursor-theme-name=Bimbata-Ice
-gtk-cursor-theme-size=24
+gtk-cursor-theme-name=$THEME
+gtk-cursor-theme-size=$SIZE
 EOF
 
-  log_success "System cursor set to Bimbata-Ice"
+  # 3. QT (Environment Variables)
+  mkdir -p "$HOME/.config/environment.d"
+  echo "XCURSOR_THEME=$THEME" >"$HOME/.config/environment.d/10-cursor.conf"
+  echo "XCURSOR_SIZE=$SIZE" >>"$HOME/.config/environment.d/10-cursor.conf"
+
+  # 4. LEGACY/X11 Support
+  mkdir -p "$HOME/.icons/default"
+  echo -e "[Icon Theme]\nInherits=$THEME" >"$HOME/.icons/default/index.theme"
+
+  log_success "Cursor universal setup complete!"
 }
 
 make_scripts_executable() {
