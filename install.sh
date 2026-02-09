@@ -310,7 +310,34 @@ display_summary() {
   echo -e "\n${GREEN}========================================${NC}"
   echo -e "${GREEN}    Installation Completed Successfully!${NC}"
   echo -e "${GREEN}========================================${NC}"
-  echo -e "1. Reboot your system\n2. Log into Hyprland\n3. Enjoy!\n"
+  echo -e "${YELLOW}What would you like to do next?${NC}"
+  echo -e "1) Reboot (Recommended)"
+  echo -e "2) Logout"
+  echo -e "3) Exit and reboot later"
+
+  read -rp "Enter choice [1-3]: " choice
+
+  case $choice in
+  1)
+    log_info "Rebooting system now..."
+    sleep 2
+    systemctl reboot
+    ;;
+  2)
+    log_info "Logging out..."
+    sleep 2
+    # Perintah logout universal untuk desktop
+    loginctl terminate-user "$USER"
+    ;;
+  3)
+    echo -e "\n${BLUE}Enjoy your new setup! Don't forget to reboot later.${NC}"
+    exit 0
+    ;;
+  *)
+    echo -e "${RED}Invalid option. Exiting script...${NC}"
+    exit 0
+    ;;
+  esac
 }
 
 main() {
