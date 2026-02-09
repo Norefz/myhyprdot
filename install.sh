@@ -159,7 +159,7 @@ install_packages() {
     "hyprland" "hypridle" "hyprlock" "waybar" "swaync" "kitty" "swww"
     "brightnessctl" "playerctl" "grim" "slurp" "jq" "ttf-jetbrains-mono-nerd"
     "papirus-icon-theme" "network-manager-applet" "polkit-gnome" "swaync"
-    "fcitx5" "cava" "ranger" "fastfetch" "starship" "eww" "qt6ct"
+    "fcitx5" "cava" "ranger" "fastfetch" "starship" "qt6ct"
     "thunar" "rofi" "htop" "wireplumber" "wl-clipboard" "wlogout"
     "libnotify" "python3" "bc" "wget" "atool" "imagemagick" "zsh"
     "blueman" "qt6ct" "nvim" "exa" "pokemon-colorscripts-git" "sl" "cmatrix" "nm-connection-editor" "ttf-firacode-nerd" "which"
@@ -326,7 +326,6 @@ display_summary() {
   2)
     log_info "Logging out..."
     sleep 2
-    # Perintah logout universal untuk desktop
     loginctl terminate-user "$USER"
     ;;
   3)
