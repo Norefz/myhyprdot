@@ -245,7 +245,7 @@ copy_configs() {
   log_success "All files copied physically. You can safely delete the repo folder after this."
 }
 
-setup_cursor_all() {
+setup_cursor() {
   local THEME="Bibata-Modern-Ice"
   local SIZE=24
 
