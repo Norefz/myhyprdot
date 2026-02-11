@@ -15,9 +15,12 @@
 - **App Launcher**: Rofi
 - **Terminal Emulator**: kitty
 - **Shell**: Zsh
+- **Terminal File**: Ranger
+- **Logout**: wlogout
+- **Lock Session**: hyprlock
 - **Media Controls**: playerctl
 - **Brightness Control**: brightnessctl
-- **Audio Management**: pamixer, popewire
+- **Audio Management**: pamixer, pipewire
 - **Network Management**: NetworkManager (nmcli), iwd (iNet Wireless Daemon)
 
 
