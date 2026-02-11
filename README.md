@@ -69,61 +69,55 @@
 
 ## Keybindings
 
-| Shortcut                       | Action                                                      |
-| ------------------------------ | ----------------------------------------------------------- |
-| **`⌘ + T`**             | Open terminal                                               |
-| **`⌘ + B`**             | Launch browser                                              |
-| **`⌘ + W`**             | Close active window                                         |
-| **`⌘ + V`**             | Toggle floating mode                                        |
-| **`⌘ + F`**             | Enable fullscreen (mode 1)                                  |
-| **`⌘ + G`**             | Disable fullscreen (mode 0)                                 |
-| **`⌘ + N`**             | Launch floating Neovim Anywhere window                      |
-| **`⌘ + O`**             | Launch Obsidian                                             |
-| **`⌘ + E`**             | Open file manager in terminal                               |
-| **`⌘ + P`**             | Open Rofi power menu (Rofi)                                        |
-| **`⌘ + Space`**         | Launch Rofi app launcher (Rofi)                                   |
-| **`⌘ + Shift + R`**     | Open wallpaper selector and reload Hyprpaper                |
-| **`⌘ + Shift + S`**     | Take area screenshot using Grim & Slurp (copy to clipboard) |
-| **`Print`**                    | Take area screenshot and save with Grimblast                |
-| **`Alt + Shift + S`**          | Run custom screenshot script                                |
-| **`Alt + Shift + W`**          | Restart Waybar                                              |
-| **`Ctrl + Shift + Tab`**       | Open task manager in terminal                               |
-| **`⌘ + C`**             | Launch color picker                                         |
-| **`⌘ + I`**             | Change wallpaper and reload Hyprpaper                       |
-| **`⌘ + M`**             | Launch Rofi clipboard manager (Rofi)                              |
-| **`⌘ + Shift + L`**     | Lock screen using Hyprlock                                  |
-| **`⌘ + A`**             | Launch Rofi Wi-Fi selector (Rofi)                                  |
-| **`Alt + Tab`**                | Cycle to next window                                        |
-| **`Alt + Shift + Tab`**        | Cycle to previous window                                    |
-| **`⌘ + Tab`**           | Bring active window to top                                  |
-| **`⌘ + H / J / K / L`** | Move focus (left / down / up / right)                       |
+## ⌨️ Keybindings
 
+These dotfiles use **SUPER** (Windows Key) as the main modifier (`$mainMod`).
+
+### 🖥️ System & Management
+| Shortcut | Action |
+| :--- | :--- |
+| <kbd>⌘</kbd> + <kbd>Space</kbd> | Launch App Launcher (Rofi) |
+| <kbd>⌘</kbd> + <kbd>W</kbd> | Open Wallpaper Picker |
+| <kbd>⌘</kbd> + <kbd>R</kbd> | Randomize Wallpaper & Colors (Pywal) |
+| <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> | Restart Waybar & Reload Hyprland |
+| <kbd>⌘</kbd> + <kbd>M</kbd> | Exit Hyprland Session |
+| <kbd>⌘</kbd> + <kbd>Esc</kbd> | Open Power Menu (wlogout) |
+
+### 🚀 Applications
+| Shortcut | Action |
+| :--- | :--- |
+| <kbd>⌘</kbd> + <kbd>Return</kbd> | Open Terminal (Kitty) |
+| <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>Return</kbd> | Open Floating Terminal |
+| <kbd>⌘</kbd> + <kbd>G</kbd> | Open Web Browser (Zen Browser) |
+| <kbd>⌘</kbd> + <kbd>E</kbd> | Open File Manager (Thunar) |
+| <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>D</kbd> | Open Discord (Vesktop) |
+| <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd> | Open WhatsApp (WhatsDesk) |
+
+### 🪟 Window Management
+| Shortcut | Action |
+| :--- | :--- |
+| <kbd>⌘</kbd> + <kbd>X</kbd> | Kill Active Window |
+| <kbd>⌘</kbd> + <kbd>F</kbd> | Toggle Fullscreen |
+| <kbd>⌘</kbd> + <kbd>T</kbd> | Toggle Floating Mode |
+| <kbd>⌘</kbd> + <kbd>P</kbd> | Toggle Pseudo-tiling |
+| <kbd>⌘</kbd> + <kbd>V</kbd> | Toggle Split (Dwindle) |
+| <kbd>⌘</kbd> + <kbd>H</kbd> <kbd>J</kbd> <kbd>K</kbd> <kbd>L</kbd> | Move Focus (Left/Down/Up/Right) |
+| <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>H</kbd> <kbd>J</kbd> <kbd>K</kbd> <kbd>L</kbd> | Swap Window Position |
+
+### 📑 Workspaces
+| Shortcut | Action |
+| :--- | :--- |
+| <kbd>⌘</kbd> + <kbd>1-0</kbd> | Switch to Workspace 1-10 |
+| <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>1-0</kbd> | Move Window to Workspace 1-10 |
+| <kbd>⌘</kbd> + <kbd>S</kbd> | Toggle Special Workspace (Scratchpad) |
+| <kbd>⌘</kbd> + <kbd>[</kbd> or <kbd>]</kbd> | Cycle Through Workspaces |
+
+### 📸 Screenshots & Media
+| Shortcut | Action |
+| :--- | :--- |
+| <kbd>Print</kbd> | Fullscreen Screenshot (Save & Copy) |
+| <kbd>⌘</kbd> + <kbd>Print</kbd> | Screenshot Active Window |
+| <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>Print</kbd> | Screenshot Selected Region |
+| <kbd>XF86 Volume</kbd> | Adjust Volume (Up/Down/Mute) |
+| <kbd>XF86 Brightness</kbd> | Adjust Screen Brightness |
 ### Workspace Management
-
-| Shortcut                       | Action                                          |
-| ------------------------------ | ----------------------------------------------- |
-| **`⌘ + 1–6`**           | Switch to workspace 1–6                         |
-| **`⌘ + 0 / 9 / 8 / 7`** | Alternate workspace mapping (custom preference) |
-| **`⌘ + Shift + [1–0]`** | Move active window to workspace 1–10            |
-
----
-
-## Tmux Workflow
-
-> **Prefix key:** `Ctrl + A`
-> To enable these shortcuts, clone my **dotsh** repository containing all the custom scripts:
-
-```bash
-git clone https://github.com/ad1822/dotsh.git ~/work/main/dotsh
-```
-
-After cloning, update the paths in your Tmux configuration if your directory structure differs.
-
-| Shortcut       | Description                                                                    |
-| -------------- | ------------------------------------------------------------------------------ |
-| **Prefix + i** | Launch *fzf-based cheatsheat* (`~/work/main/dotsh/fzf/ch`)                |
-| **Prefix + t** | Open *fzf Tmux session switcher* (`~/work/main/dotsh/fzf/tmux-session`)        |
-| **Prefix + d** | Edit dotfiles via *fzf-based selector* (`~/work/main/dotsh/fzf/edit-dotfiles`) |
-| **Prefix + m** | Open *[mpterm](https://github.com/ad1822/mpterm)* — a minimal music player terminal                                r
-
----
