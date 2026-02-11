@@ -16,7 +16,6 @@
 - **Terminal Emulator**: kitty
 - **Shell**: Zsh
 - **Media Controls**: playerctl
-- **Power Management**: acpi
 - **Brightness Control**: brightnessctl
 - **Audio Management**: pamixer, popewire
 - **Network Management**: NetworkManager (nmcli), iwd (iNet Wireless Daemon)
@@ -27,13 +26,13 @@
 1. **Clone the repository** to your home directory like `~` or `/home/username` :
 
    ```sh
-   git clone https://github.com/ad1822/hyprdots ~/hyprdots
+   git clone https://github.com/Norefz/Hyprdots.git
    ```
 
 2. **Navigate to the cloned directory**:
 
    ```sh
-   cd ~/hyprdots
+   cd ~/Hyprdots
    ```
 
 3. **Run the setup script**:
