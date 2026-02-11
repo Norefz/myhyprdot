@@ -15,6 +15,7 @@
 - **App Launcher**: Rofi
 - **Terminal Emulator**: kitty
 - **Shell**: Zsh
+- **File Manager**: Thunar
 - **Terminal File**: Ranger
 - **Logout**: wlogout
 - **Lock Session**: hyprlock
@@ -81,7 +82,6 @@ These dotfiles use **SUPER** (Windows Key) as the main modifier (`$mainMod`).
 | <kbd>⌘</kbd> + <kbd>R</kbd> | Randomize Wallpaper & Colors (Pywal) |
 | <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> | Restart Waybar & Reload Hyprland |
 | <kbd>⌘</kbd> + <kbd>M</kbd> | Exit Hyprland Session |
-| <kbd>⌘</kbd> + <kbd>Esc</kbd> | Open Power Menu (wlogout) |
 
 ### 🚀 Applications
 | Shortcut | Action |
@@ -90,8 +90,6 @@ These dotfiles use **SUPER** (Windows Key) as the main modifier (`$mainMod`).
 | <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>Return</kbd> | Open Floating Terminal |
 | <kbd>⌘</kbd> + <kbd>G</kbd> | Open Web Browser (Zen Browser) |
 | <kbd>⌘</kbd> + <kbd>E</kbd> | Open File Manager (Thunar) |
-| <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>D</kbd> | Open Discord (Vesktop) |
-| <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd> | Open WhatsApp (WhatsDesk) |
 
 ### 🪟 Window Management
 | Shortcut | Action |
