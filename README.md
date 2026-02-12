@@ -5,6 +5,13 @@
 ## Waybar 
 ![waybar](https://github.com/user-attachments/assets/59197883-6ce6-4acf-98d5-80b7889149b8)
 
+## Kitty Terminal 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d9408847-046d-4392-95b3-b42a5d92f9d3" />
+
+## Ranger
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/863e43e4-6359-494f-8b03-197896d9e53a" />
+
+
 ## Rofi Menu
 ![rofi](https://github.com/user-attachments/assets/47f3760b-0d47-4eaf-a09a-50d895f53218)
 
