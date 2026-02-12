@@ -2,6 +2,29 @@
 
 
 
+## Waybar 
+![waybar](https://github.com/user-attachments/assets/59197883-6ce6-4acf-98d5-80b7889149b8)
+
+## Rofi Menu
+![rofi](https://github.com/user-attachments/assets/47f3760b-0d47-4eaf-a09a-50d895f53218)
+
+## Rofi WallChanger
+![rofi wallpaper changer](https://github.com/user-attachments/assets/91dda0d1-453b-4464-8975-2ad1a35ff89b)
+
+## Ranger
+![ranger](https://github.com/user-attachments/assets/265945a7-197f-4073-b161-3c49ce6f6d78)
+
+## Wlogout
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9dde8425-de6b-4271-996f-186610fea42a" />
+
+## SwayNotif
+<img width="793" height="470" alt="image" src="https://github.com/user-attachments/assets/69efa28d-ce42-4f2c-b434-991836866d24" />
+
+## SwayNc
+<img width="448" height="1012" alt="image" src="https://github.com/user-attachments/assets/29daf45d-21f4-41db-afef-2efeca8f3143" />
+
+## HyprLock
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8b437af2-2256-41e3-a55c-1d3100c23aae" />
 
 
 ### 📦 Programs Included
@@ -23,22 +46,6 @@
 - **Brightness Control**: brightnessctl
 - **Audio Management**: pamixer, pipewire
 - **Network Management**: NetworkManager (nmcli), iwd (iNet Wireless Daemon)
-
-## Waybar 
-![waybar](https://github.com/user-attachments/assets/59197883-6ce6-4acf-98d5-80b7889149b8)
-
-## Rofi Menu
-![rofi](https://github.com/user-attachments/assets/47f3760b-0d47-4eaf-a09a-50d895f53218)
-
-## Rofi WallChanger
-![rofi wallpaper changer](https://github.com/user-attachments/assets/91dda0d1-453b-4464-8975-2ad1a35ff89b)
-
-## Ranger
-![ranger](https://github.com/user-attachments/assets/265945a7-197f-4073-b161-3c49ce6f6d78)
-
-## Wlogout
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9dde8425-de6b-4271-996f-186610fea42a" />
-
 
 ## 
 
