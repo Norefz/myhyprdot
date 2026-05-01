@@ -43,8 +43,8 @@ selection=$(fetch_wallpapers | rofi -dmenu -i -p "󰸉 Select Wallpaper" -theme 
 if [ -n "$selection" ]; then
   FULL_PATH="$WALL_DIR/$selection"
 
-  # 1. Apply wallpaper via swww with transition effects
-  swww img "$FULL_PATH" --transition-type wipe --transition-angle 30 --transition-step 90
+  # 1. Apply wallpaper via awww with transition effects
+  awww img "$FULL_PATH" --transition-type wipe --transition-angle 30 --transition-step 90
 
   # 2. Update system colorscheme via Pywal
   wal -i "$FULL_PATH" -n -q
